@@ -1,2 +1,2 @@
 # AutomateTheBoringStuff
-projects
+:snake: :computer:
