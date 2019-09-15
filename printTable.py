@@ -1,7 +1,9 @@
 """Write a function named printTable() that takes a list of lists of strings and displays it in a
 well-organized table with each column right-justified. Assume that all the inner lists will
 contain the same number of strings."""
-from typing import List
+
+"""This program fails in that it requires that the list of lists contain only three sublists, and that the number of sublists be known. 
+I am still working to make it automatic with a subiteration."""
 
 tableData = [['apples', 'oranges', 'cherries', 'banana'],['Alice', 'Bob', 'Carol', 'David'],['dogs', 'cats', 'moose', 'goose']]
 
