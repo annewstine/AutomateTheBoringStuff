@@ -2,22 +2,20 @@
 well-organized table with each column right-justified. Assume that all the inner lists will
 contain the same number of strings."""
 
-"""This program fails in that it requires that the list of lists contain only three sublists, and that the number of sublists be known. 
-I am still working to make it automatic with a subiteration."""
-
 tableData = [['apples', 'oranges', 'cherries', 'banana'],['Alice', 'Bob', 'Carol', 'David'],['dogs', 'cats', 'moose', 'goose']]
 
 def printTable(tableData):
     colWidths = [0] * len(tableData)
+    #columns = len(tableData)
+    # rows = len(tableData[0])
     x = max(tableData, key = len)
     longest = max(x, key = len)
+    global rowWidth
     rowWidth = len(longest)
-    rows = len(tableData[0])
-    z = 0
-    while z <= rows:
-        for i in range(rows):
-            print(tableData[0][z].ljust(rowWidth, ' ') + tableData[1][z].center(rowWidth, ' ') + tableData[2][z].center(rowWidth, ' '))
-            z +=1
-        break
+
+    for y in range(len(tableData[0])):
+        for x in range(len(tableData)):
+            print(tableData[x][y].rjust(rowWidth, ' '), end=' ')
+        print()
 
 printTable(tableData)
