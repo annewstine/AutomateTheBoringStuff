@@ -24,5 +24,3 @@ elif len(sys.argv) == 2:
         pyperclip.copy(mcbShelf[sys.argv[1]])
 
 mcbShelf.close()
-
-#delete keys like so"
