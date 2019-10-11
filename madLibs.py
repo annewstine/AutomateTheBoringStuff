@@ -18,9 +18,9 @@ def madLibs(ADJECTIVE, NOUN, VERB, NOUN2):
     # TODO: Substitute user text for words in text file and print
     NOUNregex = re.compile(r'NOUN')
     newContent = NOUNregex.sub(NOUN, content, 1)
-    ADJregex = re.compile(r'ADJECTIVE?')
+    ADJregex = re.compile(r'ADJECTIVE')
     newContent = ADJregex.sub(ADJECTIVE, newContent, 1)
-    VERBregex = re.compile(r'VERB?')
+    VERBregex = re.compile(r'VERB')
     newContent = VERBregex.sub(VERB, newContent, 1)
     newContent = NOUNregex.sub(NOUN2, newContent, 1)
     print(newContent)
